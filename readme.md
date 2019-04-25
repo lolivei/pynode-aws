@@ -4,5 +4,5 @@
 Image containing Node.js, Python and AWS CLI tool.
 
 - Node.js v10
-- Pyton3
+- Python3
 - AWS CLI
