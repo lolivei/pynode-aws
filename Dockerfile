@@ -1,4 +1,4 @@
-FROM node:10-alpine
+FROM node:11-alpine
 
 RUN apk add --no-cache python python-dev python3 python3-dev \
     linux-headers build-base bash git ca-certificates && \
@@ -7,5 +7,7 @@ RUN apk add --no-cache python python-dev python3 python3-dev \
     pip3 install --upgrade pip setuptools && \
     if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi && \
     rm -r /root/.cache
+
+RUN npm install --global yarn
 
 RUN pip3 install awscli
